@@ -25,7 +25,7 @@ It can detect human emotions (e.g., Angry, Happy, Sad, Fear, Surprise, Neutral, 
 
 ## 📂 Project Structure
 EMOTION_DETECTION/
-│── archive_4.zip # Dataset (FER-2013 or custom)
+│── archive_4.zip # Dataset (FER-2013 or custom)<br>
 │── emotion_detection_from_scratch_using_CNN.ipynb # Jupyter notebook (training)
 │── emotion_model.keras # Saved CNN model
 │── haarcascade_frontalface_default.xml # Haar Cascade for face detection
