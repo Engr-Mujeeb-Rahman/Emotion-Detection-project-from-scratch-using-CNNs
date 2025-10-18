@@ -4,9 +4,7 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 
-# ------------------------------------------------------
 # Load the trained emotion detection model
-# ------------------------------------------------------
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model("emotion_model.keras")  # make sure the file name matches
@@ -14,19 +12,13 @@ def load_model():
 
 model = load_model()
 
-# ------------------------------------------------------
 # Emotion Labels (adjust according to your model)
-# ------------------------------------------------------
 EMOTIONS = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
-# ------------------------------------------------------
 # Load Haar Cascade for face detection
-# ------------------------------------------------------
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-# ------------------------------------------------------
 # Streamlit UI
-# ------------------------------------------------------
 st.title("😊 Face Emotion Detection App")
 st.write("Upload an image and let the AI detect the emotions in it.")
 
@@ -71,3 +63,4 @@ if uploaded_file is not None:
 
 else:
     st.info("👆 Please upload an image file to begin emotion detection.")
+
